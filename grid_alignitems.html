@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Align-item</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        display: grid;
+        gap: 20px;
+        border-radius: 16px;
+        width: 80%;
+        height: 80%;
+        background-color: rgb(235, 242, 255);
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: repeat(2, 200px);
+        justify-content: center;
+        align-content: space-evenly;
+      }
+
+      .item {
+        border-radius: 12px;
+        background-color: cornflowerblue;
+      }
+
+      /* .item1 {
+        justify-self: center;
+        align-self: center;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

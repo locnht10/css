@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      * {
+        background-color: lightgray;
+      }
+
+      div > p {
+        color: blue;
+      }
+
+      .highlight ~ p {
+        background-color: yellow;
+      }
+
+      .highlight + p {
+        background-color: red;
+      }
+
+      button:hover {
+        background-color: green;
+      }
+
+      /* li:nth-child(even) {
+        background-color: lightslategray;
+      } */
+
+      /* li:first-child(3) {
+        background-color: lightslategray;
+      } */
+
+      li:nth-child(3) {
+        background-color: lightslategray;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Đoạn văn này sẽ có màu xanh vì nó là con trực tiếp của div.</p>
+      <span>
+        <p>
+          Đoạn văn này không bị ảnh hưởng vì nó nằm trong một phần tử trung
+          gian.
+        </p>
+      </span>
+    </div>
+
+    <h3 class="highlight">Tiêu đề này có class "highlight"</h3>
+    <p>Đoạn văn ngay sau tiêu đề này sẽ có nền xám.</p>
+    <p>Các đoạn văn tiếp theo sẽ có nền vàng.</p>
+    <p>Thêm một đoạn văn khác cũng có nền vàng.</p>
+    <button>Bấm vào đây</button>
+
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Auto-fit</title>
+    <style>
+      .container {
+        display: grid;
+        gap: 10px;
+        padding: 10px;
+        background: #f4f4f4;
+        border: 2px solid #333;
+      }
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px;
+        background-color: aquamarine;
+      }
+
+      .auto-fill {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+
+      .auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Grid với <code>auto-fill</code></h2>
+    <div class="container auto-fill">
+      <div class="item item-1">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h2>Grid với <code>auto-fit</code></h2>
+    <div class="container auto-fit">
+      <div class="item item-1">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cách viết CSS</title>
+    <style>
+      h1 {
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 2rem;
+        text-transform: none;
+        text-align: justify;
+      }
+      p {
+        letter-spacing: 0.05em;
+        padding: 10px 20px;
+        border: 2px solid red;
+        border-radius: 10px;
+        box-sizing: border-box; /* width, height = content + padding + border */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Có ba cách viết CSS phổ biến khi xây dựng trang web:</h1>
+    <p>
+      CSS nội tuyến (Inline CSS): Viết trực tiếp trong thuộc tính style của thẻ
+      HTML. Cách này giúp áp dụng nhanh nhưng làm mã nguồn rối và khó bảo trì.
+    </p>
+
+    <p>
+      CSS nội bộ (Internal CSS): Viết trong thẻ &lt;style&gt; bên trong file
+      HTML. Thích hợp cho các trang web nhỏ hoặc cần tùy chỉnh riêng lẻ.
+    </p>
+
+    <p>
+      CSS ngoài (External CSS): Viết trong file .css riêng và liên kết với HTML
+      bằng thẻ &lt;link&gt;. Đây là cách tối ưu, giúp tái sử dụng và quản lý dễ
+      dàng. Trong đó, CSS ngoài là phương pháp được khuyến khích nhất để xây
+      dựng giao diện chuyên nghiệp.
+    </p>
+  </body>
+</html>

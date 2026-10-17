@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neumorphism</title>
+    <style>
+      body {
+        min-height: 100vh;
+        background-color: #cbd5e1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        color: #020617;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .neumorphism {
+        width: 150px;
+        height: 100px;
+        background: #cbd5e1;
+        border-radius: 12px;
+        transition: all 0.2s ease-in-out;
+        box-shadow:
+          4px 4px 10px -2px #94a3b8,
+          -4px -4px 10px -2px #f1f5f9;
+      }
+
+      .circle {
+        border-radius: 100%;
+        width: 150px;
+        height: 150px;
+      }
+
+      .neumorphism:hover {
+        box-shadow:
+          6px 6px 12px #94a3b8,
+          -6px -6px 12px #f1f5f9;
+      }
+
+      .neumorphism:active {
+        box-shadow:
+          inset 4px 4px 10px -2px #94a3b8,
+          inset -4px -4px 10px -2px #f1f5f9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Neumorphism</h1>
+    <div class="container">
+      <div class="neumorphism"></div>
+      <div class="neumorphism circle"></div>
+      <div class="neumorphism"></div>
+    </div>
+  </body>
+</html>

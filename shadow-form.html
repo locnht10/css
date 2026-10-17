@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow Form</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .blur {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(199, 219, 252, 0.6);
+        position: absolute;
+        border-radius: 100%;
+        z-index: -1;
+        filter: blur(300px);
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        min-height: 100vh;
+        background-color: hsl(224, 71%, 4%);
+        font-family: Arial, sans-serif;
+        color: hsl(220, 13%, 91%);
+        font-size: 24px;
+      }
+
+      form {
+        background: hsl(217, 33%, 17%);
+        padding: 60px 120px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .name-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      input[type="text"] {
+        font-size: 20px;
+        width: 360px;
+      }
+
+      input[type="text"]::placeholder {
+        color: hsl(215, 19%, 35%);
+      }
+
+      input[type="text"],
+      input[type="checkbox"] {
+        background-color: hsl(221, 39%, 11%);
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+        caret-color: white;
+        color: hsl(220, 13%, 91%);
+      }
+
+      input[type="text"],
+      button[type="submit"] {
+        padding: 16px;
+        border: none;
+        border-radius: 4px;
+      }
+
+      input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 28px;
+        height: 28px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        cursor: pointer;
+      }
+
+      input[type="checkbox"]:checked {
+        background-color: hsl(224, 76%, 48%);
+      }
+
+      input[type="checkbox"]:checked:after {
+        content: "\2713"; /* Unicode checkmark */
+        font-size: 20px;
+        position: absolute;
+        color: white;
+      }
+
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      button {
+        background-color: hsl(224, 76%, 48%);
+        cursor: pointer;
+        font-size: 24px;
+        transition: background-color 0.2s;
+        color: hsl(220, 13%, 91%);
+        box-shadow:
+          0px 4px 4px -2px rgba(14, 21, 45, 0.5),
+          inset 0px 2px 1px rgba(96, 165, 250, 0.5);
+      }
+
+      button:hover {
+        background-color: hsl(226, 71%, 40%);
+      }
+
+      input {
+        box-shadow:
+          0px 2px 1px hsl(217, 19%, 27%, 0.5),
+          inset 0px 4px 4px -2px hsl(224, 71%, 4%, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Dùng để tạo highlight phía sau form -->
+    <div class="blur"></div>
+
+    <!-- Form bắt đầu từ đây -->
+    <form>
+      <div class="name-container">
+        <label for="name">Nhập tên của bạn</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Nhập tên tại đây..."
+          required
+        />
+      </div>
+
+      <label class="checkbox-container">
+        <input type="checkbox" name="agree" required /> Tôi đồng ý với điều
+        khoản
+      </label>
+
+      <button type="submit">Gửi</button>
+    </form>
+    <!-- Form kết thúc tại đây -->
+  </body>
+</html>

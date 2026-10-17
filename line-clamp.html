@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Line Clamp</title>
+    <style>
+      .box {
+        width: 250px;
+        height: 125px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+
+      .line-clamp {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h2>Line-clamp: 2</h2>
+        <p class="line-clamp">
+          Ngày 7/3, Cơ quan Hàng không Liên bang Mỹ (FAA) thông báo vụ nổ tàu vũ
+          trụ Starship của SpaceX một ngày trước đã làm gián đoạn khoảng 240
+          chuyến bay, trong đó hơn 20 máy bay phải chuyển hướng do lo ngại về
+          mảnh vỡ không gian.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

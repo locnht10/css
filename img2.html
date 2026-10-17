@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image + CSS</title>
+    <style>
+      div {
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        border: 1px solid black;
+        /* background-image: url("assets/babythree1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; */
+        background: url(./assets/babythree1.jpg) no-repeat center / cover fixed;
+      }
+
+      p {
+        background: #121fcf;
+        background: linear-gradient(
+          to bottom,
+          #121fcf 0%,
+          #00ff00 50%,
+          #cf1512 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Background-Image</h1>
+    <p>background-image là thuộc tính dùng để chèn ảnh nền</p>
+    <div></div>
+  </body>
+</html>

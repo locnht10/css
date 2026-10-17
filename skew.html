@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skew</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 50px;
+      }
+
+      .container {
+        display: flex;
+        padding: 50px;
+        justify-content: center;
+        align-items: center;
+        perspective: 1000px;
+      }
+
+      .box {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: royalblue;
+        border-radius: 16px;
+        transition: transform 1s ease;
+      }
+
+      .box:hover {
+        transform: skewX(-5deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">Nghiêng Tui</div>
+    </div>
+  </body>
+</html>
